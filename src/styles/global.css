@@ -1,0 +1,18 @@
+:root {
+  --bg: #f7f7f8; --card: #ffffff; --text: #1c1c1e; --muted: #6b6b76; --border: #e4e4e7;
+  --primary: #2563eb; --primary-hover: #1d4fd0;
+  --red: #dc2626; --yellow: #b45309; --green: #15803d;
+  --red-bg: #fef2f2; --yellow-bg: #fffbeb; --green-bg: #f0fdf4;
+  --radius: 8px;
+}
+[data-theme='dark'] {
+  --bg: #111113; --card: #1a1a1d; --text: #ececf0; --muted: #9a9aa5; --border: #2c2c31;
+  --primary: #5b8def; --primary-hover: #7aa2f3;
+  --red: #f87171; --yellow: #fbbf24; --green: #4ade80;
+  --red-bg: #2a1717; --yellow-bg: #2a2314; --green-bg: #15251b;
+}
+* { box-sizing: border-box; margin: 0; }
+html, body { min-height: 100%; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }

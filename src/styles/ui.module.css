@@ -1,0 +1,100 @@
+.muted { color: var(--muted); font-size: .875rem; }
+.error { color: var(--red); font-size: .8rem; }
+.strike { text-decoration: line-through; color: var(--muted); }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); }
+
+/* Buttons */
+.primaryBtn { background: var(--primary); color: #fff; border: 0; padding: 9px 16px; border-radius: 6px; font-weight: 500; transition: background .15s; }
+[data-theme='dark'] .primaryBtn { color: #0b0b0d; }
+.primaryBtn:hover { background: var(--primary-hover); }
+.ghostBtn { background: transparent; border: 1px solid var(--border); padding: 8px 14px; border-radius: 6px; transition: background .15s; }
+.ghostBtn:hover { background: var(--bg); }
+.iconBtn { background: transparent; border: 1px solid var(--border); padding: 8px 14px; border-radius: 6px; font-size: .875rem; transition: background .15s; }
+.iconBtn:hover { background: var(--bg); }
+.linkBtn { background: none; border: 0; color: var(--primary); font-size: .85rem; padding: 4px 8px; border-radius: 4px; }
+.linkBtn:hover { text-decoration: underline; }
+.danger { color: var(--red); }
+
+/* Forms */
+.field { display: flex; flex-direction: column; gap: 6px; margin-top: 14px; flex: 1; text-align: left; }
+.field > span { font-size: .85rem; font-weight: 500; }
+.field input, .field select, .field textarea { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 9px 12px; outline: none; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--primary); }
+.row { display: flex; gap: 12px; flex-wrap: wrap; }
+.row > * { min-width: 140px; }
+
+/* Onboarding */
+.onboard { min-height: 100vh; display: grid; place-items: center; padding: 20px; position: relative; }
+.onboardCard { width: 100%; max-width: 380px; padding: 28px; }
+.onboardCard .primaryBtn { width: 100%; margin-top: 22px; padding: 10px; }
+.brand { font-size: 1.5rem; font-weight: 700; letter-spacing: -.01em; margin-bottom: 4px; }
+
+/* Layout */
+.app { min-height: 100vh; }
+.container { max-width: 1040px; margin: 0 auto; padding: 24px 16px 64px; }
+.header { background: var(--card); border-bottom: 1px solid var(--border); padding: 14px 16px; }
+.headerInner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.brandSmall { font-weight: 700; font-size: .8rem; color: var(--muted); }
+.greeting { font-size: 1.1rem; font-weight: 600; }
+.greeting .muted { font-weight: 400; }
+.headerActions { display: flex; gap: 8px; align-items: center; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.stat { padding: 14px 16px; }
+.statValue { font-size: 1.6rem; font-weight: 600; line-height: 1.1; }
+.statLabel { color: var(--muted); font-size: .8rem; margin-top: 2px; }
+.statRed .statValue { color: var(--red); }
+.statGreen .statValue { color: var(--green); }
+.statYellow .statValue { color: var(--yellow); }
+
+/* Toolbar */
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin: 24px 0 14px; }
+.tabs { display: flex; gap: 2px; overflow-x: auto; border-bottom: 1px solid var(--border); }
+.tab { background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: 8px 14px; color: var(--muted); white-space: nowrap; }
+.tab:hover { color: var(--text); }
+.tabActive { color: var(--text); border-bottom-color: var(--primary); font-weight: 500; }
+
+/* Task cards */
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.task { padding: 16px; display: flex; flex-direction: column; gap: 10px; border-left: 3px solid var(--border); animation: fade .25s ease both; }
+.leaving { animation: out .2s ease forwards; }
+.stDone { border-left-color: var(--green); }
+.stOverdue { border-left-color: var(--red); background: var(--red-bg); }
+.stUrgent { border-left-color: var(--red); background: var(--red-bg); }
+.stSoon { border-left-color: var(--yellow); background: var(--yellow-bg); }
+.taskTop { display: flex; gap: 10px; align-items: flex-start; }
+.taskMain h4 { font-size: 1rem; font-weight: 600; }
+.check { width: 18px; height: 18px; accent-color: var(--green); margin-top: 3px; cursor: pointer; flex-shrink: 0; }
+.desc { font-size: .875rem; color: var(--muted); }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.badge { font-size: .75rem; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); color: var(--muted); }
+.pHigh { color: var(--red); border-color: currentColor; }
+.pMid { color: var(--yellow); border-color: currentColor; }
+.badgeStatus { color: var(--text); }
+.stOverdue .badgeStatus, .stUrgent .badgeStatus { color: var(--red); border-color: currentColor; }
+.stSoon .badgeStatus { color: var(--yellow); border-color: currentColor; }
+.stDone .badgeStatus { color: var(--green); border-color: currentColor; }
+.taskFooter { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+
+/* Empty */
+.empty { text-align: center; padding: 56px 16px; display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--muted); }
+.empty h3 { color: var(--text); font-size: 1rem; font-weight: 600; margin-top: 8px; }
+.empty .primaryBtn { margin-top: 12px; }
+
+/* Modal */
+.overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, .45); display: grid; place-items: center; padding: 16px; z-index: 50; animation: fade .15s ease; }
+.modal { width: 100%; max-width: 460px; padding: 22px; max-height: 92vh; overflow-y: auto; }
+.modal h3 { font-size: 1.1rem; font-weight: 600; }
+.modalActions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
+
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@keyframes out { to { opacity: 0; } }
+
+@media (min-width: 640px) {
+  .stats { grid-template-columns: repeat(4, 1fr); }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
